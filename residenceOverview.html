@@ -2,97 +2,115 @@
 
 <html lang="en">
     <head>
-    	<title>Washing Machine app</title>
-    	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-   	</head>
+      <title>Time2Laundry</title>
+      <!-- dropdown -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    </head>
 
-   	<body>
-   		<!-- Header view -->
-   		<div class="container">
-   			<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #455860">
-   				<div class="container-fluid">
-   					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    					<ul class="nav navbar-nav">
-			   				<li class="dropdown">
-			   					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Residence <span class="caret"></span></a>
-			   					<ul class="dropdown-menu">
-			   						<li> Farsta </li>
-			   						<li> Bjorksatra </li>
-			   						<li> Tyreso </li>
-			   						<li> Lappis </li>
-			   					</ul>
-			   				</li>
-			   				<li role="separator" class="divider"></li>
-			   				<li> <a href="#">About</a> </li>
-			   				<li role="separator" class="divider"></li>
-			   				<li> <a href="#">Add a Residence</a> </li>
-			   				<li role="separator" class="divider"></li>
-			   				<li> <a href="#">Log in</a> </li>
-	   					</ul>
-	   				</div>
-	   			</div>
-	   		</nav>
-   		</div>
+    <body>
+      <!-- Header view -->
+      <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #263238">
+          <div class="container-fluid">
 
-   		<!-- Residence title -->
-   		<div style="height:200px; width:100%; background-color:#4688f4">
-   			<h1 style="text-align:center; padding-top:100px;"> Farsta </h1>
-   		</div>
+            <!-- Title -->
+            <div class="navbar-header">
+              <a class="navbar-brand" style="color: white"><b>Time2Laundry</b></a>
+            </div>
 
-   		<!-- Washing machines -->
-   		<div class="row" style="padding-top:50px">
-   			<div class="col-md-3 col-md-offset-2">
-   				<div class="row" style="text-align: center;"> <h3> Machine 1 </h3> </div>
-   				<div class="row">
-   					<div class="col-md-6">
-   						<p style="text-align: center; font-family:verdana;"> Queue: </p>
-		   				<div class="row" id="queue-info">
-		   					<p style="text-align: center"> 8/12 </p>
-		   				</div>
-	   				</div>
-	   				<div class="col-md-6">
-	   					<p style="text-align: center; font-family:verdana;"> Time approx: </p>
-	   					<div class="row" id="queue-info">
-		   					<p style="text-align: center"> 210 min </p>
-		   				</div>
-	   				</div>
-   				</div>
-   				<div class="row">
-   					<img src="washing_machine_full.jpg">
-   				</div>
-   				<div class="row">
-   					<button class="btn btn-success" style="width: 100%">Get in line</button>
-   				</div>
-   				<div class="row">
-   					<button class="btn btn-danger" style="width: 100%">Report Problem</button>
-   				</div>
-   			</div>
-   			<div class="col-md-3 col-md-offset-2">
-   				<div class="row" style="text-align: center;"> <h3> Machine 2 </h3> </div>
-   				<div class="row">
-   					<div class="col-md-6">
-   						<p style="text-align: center; font-family:verdana;"> Queue: </p>
-		   				<div class="row" id="queue-info">
-		   					<p style="text-align: center"> 0/12 </p>
-		   				</div>
-	   				</div>
-	   				<div class="col-md-6">
-	   					<p style="text-align: center; font-family:verdana;"> Time approx: </p>
-	   					<div class="row" id="queue-info">
-		   					<p style="text-align: center"> 0 min </p>
-		   				</div>
-	   				</div>
-   				</div>
-   				<div class="row">
-   					<img src="washing_machine_emtpy.png" style="width:100%; height: 300px;">
-   				</div>
-   				<div class="row">
-   					<button class="btn btn-success" style="width: 100%">Get in line</button>
-   				</div>
-   				<div class="row">
-   					<button class="btn btn-danger" style="width: 100%">Report Problem</button>
-   				</div>
-   			</div>
-   		</div>
-   	</body>
+            <!-- Left Menu -->
+            <ul class="nav navbar-nav">
+              <!-- Residences -->
+              <li class="dropdown">
+                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Residences
+                 <span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+                    <li><a href="#">Farsta</a></li>
+                    <li class="disabled"><a href="#">Bjorksatra</a></li>
+                    <li class="disabled"><a href="#">Tyreso</a></li> 
+                    <li class="disabled"><a href="#">Lappis</a></li> 
+                 </ul>
+              </li>
+
+              <!-- Whasing Machine Modes -->
+              <li><a href="#">
+              <span class="glyphicon glyphicon-tint"></span> Washing Modes</a></li> 
+            </ul>
+
+            <!-- Right Menu -->
+           <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">About Us</a></li>
+           </ul>
+          
+          </div>
+        </nav>
+        <!-- endNavigationBar -->
+      </div>
+      <!-- endContainer -->
+
+      <!-- Residence title -->
+      <div style="height:200px; width:100%; background-color:#4688f4">
+        <h1 style="text-align:center; padding-top:100px;"> Farsta </h1>
+      </div>
+
+      <!-- Washing machines -->
+      <div class="row" style="padding-top:50px">
+        <div class="col-md-3 col-md-offset-2">
+          <div class="row" style="text-align: center;"> <h3> Machine 1 </h3> </div>
+          <div class="row">
+            <div class="col-md-6">
+              <p style="text-align: center; font-family:verdana;"> Queue: </p>
+              <div class="row" id="queue-info">
+                <p style="text-align: center"> 8/12 </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p style="text-align: center; font-family:verdana;"> Time approx: </p>
+              <div class="row" id="queue-info">
+                <p style="text-align: center"> 210 min </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <img src="washing_machine_full.jpg">
+          </div>
+          <div class="row">
+            <button class="btn btn-success" style="width: 100%">Get in line</button>
+          </div>
+          <div class="row">
+            <button class="btn btn-danger" style="width: 100%">Report Problem</button>
+          </div>
+        </div>
+        <div class="col-md-3 col-md-offset-2">
+          <div class="row" style="text-align: center;"> <h3> Machine 2 </h3> </div>
+          <div class="row">
+            <div class="col-md-6">
+              <p style="text-align: center; font-family:verdana;"> Queue: </p>
+              <div class="row" id="queue-info">
+                <p style="text-align: center"> 0/12 </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p style="text-align: center; font-family:verdana;"> Time approx: </p>
+              <div class="row" id="queue-info">
+                <p style="text-align: center"> 0 min </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <img src="washing_machine_emtpy.png" style="width:100%; height: 300px;">
+          </div>
+          <div class="row">
+            <button class="btn btn-success" style="width: 100%">Get in line</button>
+          </div>
+          <div class="row">
+            <button class="btn btn-danger" style="width: 100%">Report Problem</button>
+          </div>
+        </div>
+      </div>
+    </body>
 </html>
