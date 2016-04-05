@@ -87,23 +87,31 @@
             <!-- problemSelector -->
             <div class="form-group">
               <label for="problem"><span class="glyphicon glyphicon-cog"></span> Problem </label>
-              <select class="form-control" name="problems">
-                <option value="broken"> The machine doesn't work. </option>
-                <option value="nigga"> Someone has stolen the whaser. </option>
-                <option value="run"> There is a monster staring at me. </option>
-                <option value="ok"> I'm just bored. </option>
-                <option value="other"> Other... </option>
+              <select class="form-control" name="problemsSelect" ng-model="reportSelector.selected" ng-Change="reportModSelChanged()">
+                <option value="1"> The machine doesn't work. </option>
+                <option value="2"> Someone has stolen the whaser. </option>
+                <option value="3"> There is a monster staring at me. </option>
+                <option value="4"> I'm just bored. </option>
+                <option value="5"> Other... </option>
               </select>
+            </div>
+            <!-- textInput -->
+            <div class="form-group" ng-show="reportSelector.show">
+              <label for="problemDescription"> Which is the problem? </label>
+              <input type="text" class="form-control" 
+              name="problemDescriptionText" ng-model="reportSelector.description">
             </div>
           </form>
         </div>
         <!-- Footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" ng-click="report()" data-dismiss="modal">Report</button>
+          <button type="button" class="btn btn-danger" ng-click="report()">Report</button>
           <button type="button" class="btn btn-default" ng-click="close()" data-dismiss="modal">Close</button>
         </div>
       </div>
       <!-- endModalContent -->
     </div>
   </div>
+  <!-- testing stuff -->
+  {{reportSelector.selected + "" + reportSelector.description}}
 </div> <!-- endDivResidence -->

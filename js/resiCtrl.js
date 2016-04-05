@@ -1,13 +1,14 @@
 basicApp.controller('resiCtrl', function($scope) {
-	/* Awesome code here */
-	$scope.cancelar = false; 
+	/* Report Modal */
+	$scope.reportSelector = {
+		selected: 1, 
+		description: "", 
+		show: false 
+		}; 
 
-	$scope.go = function () {
-		alert("A TOPE"); 
+	$scope.reportModSelChanged = function () {
+		this.reportSelector.show = (this.reportSelector.selected == 5); 
 	}
-
-	$scope.close = function () {
-		this.cancelar = !this.cancelar; 
-	}
-
+	/* end Report Modal */
+	
 });/* endController */
