@@ -12,3 +12,8 @@ laundryTimeApp.controller('resiCtrl', function($scope) {
 	/* end Report Modal */
 	
 });/* endController */
+
+/*
+Last updated Ger: 
+This controller handles the modals triggered by the buttons 
+*/
