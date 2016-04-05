@@ -1,6 +1,6 @@
 <!-- Partial of the residence Overview -->
 
-<div class="residence" ng-controller="resiCtrl">
+<div class="residence" >
   <!-- Residence title -->
   <div class="topBackground" style="height:200px; width:100%;">
     <h1 style="text-align:center; padding-top:75px;"> Farsta </h1>
@@ -66,52 +66,56 @@
     </div>
   </div>
 
+<div class="modalClass" ng-controller="modalCtrl">
   <!-- Report Modal  -->
   <div id="reportModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <!-- Content -->
-      <div class="modal-content" >
-        <!-- Header -->
-        <div class="modal-header" style="padding:15px 30px;">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Report Problem</h4>
+      <div class="modal-dialog">
+        <!-- Content -->
+        <div class="modal-content" >
+          <!-- Header -->
+          <div class="modal-header" style="padding:15px 30px;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Report Problem</h4>
+          </div>
+          <!-- Body -->
+          <div class="modal-body" style="padding:35px 50px;">
+            <form role="form">
+              <!-- inputEmail -->
+              <div class="form-group">
+                <label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
+                <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+              </div>
+              <!-- problemSelector -->
+              <div class="form-group">
+                <label for="problem"><span class="glyphicon glyphicon-cog"></span> Problem </label>
+                <select class="form-control" name="problemsSelect" ng-model="reportSelector.selected" ng-Change="reportModSelChanged()">
+                  <option value="1"> The machine doesn't work. </option>
+                  <option value="2"> Someone has stolen the whaser. </option>
+                  <option value="3"> There is a monster staring at me. </option>
+                  <option value="4"> I'm just bored. </option>
+                  <option value="5"> Other... </option>
+                </select>
+              </div>
+              <!-- textInput -->
+              <div class="form-group" ng-show="reportSelector.show">
+                <label for="problemDescription"> Which is the problem? </label>
+                <input type="text" class="form-control" 
+                name="problemDescriptionText" ng-model="reportSelector.description">
+              </div>
+            </form>
+          </div>
+          <!-- Footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" ng-click="report()">Report</button>
+            <button type="button" class="btn btn-default" ng-click="close()" data-dismiss="modal">Close</button>
+          </div>
         </div>
-        <!-- Body -->
-        <div class="modal-body" style="padding:35px 50px;">
-          <form role="form">
-            <!-- inputEmail -->
-            <div class="form-group">
-              <label for="email"><span class="glyphicon glyphicon-envelope"></span> Email</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
-            </div>
-            <!-- problemSelector -->
-            <div class="form-group">
-              <label for="problem"><span class="glyphicon glyphicon-cog"></span> Problem </label>
-              <select class="form-control" name="problemsSelect" ng-model="reportSelector.selected" ng-Change="reportModSelChanged()">
-                <option value="1"> The machine doesn't work. </option>
-                <option value="2"> Someone has stolen the whaser. </option>
-                <option value="3"> There is a monster staring at me. </option>
-                <option value="4"> I'm just bored. </option>
-                <option value="5"> Other... </option>
-              </select>
-            </div>
-            <!-- textInput -->
-            <div class="form-group" ng-show="reportSelector.show">
-              <label for="problemDescription"> Which is the problem? </label>
-              <input type="text" class="form-control" 
-              name="problemDescriptionText" ng-model="reportSelector.description">
-            </div>
-          </form>
-        </div>
-        <!-- Footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" ng-click="report()">Report</button>
-          <button type="button" class="btn btn-default" ng-click="close()" data-dismiss="modal">Close</button>
-        </div>
+        <!-- endModalContent -->
       </div>
-      <!-- endModalContent -->
-    </div>
-  </div>
-  <!-- testing stuff -->
-  {{reportSelector.selected + "" + reportSelector.description}}
-</div> <!-- endDivResidence -->
+    </div> <!-- endReportModal -->
+    <!-- testing stuff -->
+    {{reportSelector.selected + "" + reportSelector.description}}
+  
+  </div> <!-- endModalsDiv -->
+
+</div> <!-- endResiDiv -->

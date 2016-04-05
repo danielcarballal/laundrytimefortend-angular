@@ -1,4 +1,4 @@
-basicApp.controller('resiCtrl', function($scope) {
+laundryTimeApp.controller('resiCtrl', function($scope) {
 	/* Report Modal */
 	$scope.reportSelector = {
 		selected: 1, 

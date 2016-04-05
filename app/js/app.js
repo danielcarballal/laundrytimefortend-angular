@@ -1,5 +1,4 @@
  
-
 var laundryTimeApp = angular.module('laundryTime', ['ngRoute','ngResource']);
 
 laundryTimeApp.config(['$routeProvider',
