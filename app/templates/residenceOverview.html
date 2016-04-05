@@ -1,0 +1,66 @@
+<ng-include src="'templates/header.html'"></ng-include>
+
+<!-- Partial of the residence Overview -->
+<div id="residenceOverviewView">
+
+  <!-- Residence title -->
+  <div class="topBackground" style="height:150px; width:100%;">
+    <h1 style="text-align:center; padding-top: 50px;"> {{currentResName}} </h1>
+  </div>
+
+  <!-- Washing machines -->
+    <div class="col-md-3 col-md-offset-2">
+      <div class="row" style="text-align: center;"> <h3> Machine 1 </h3> </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p style="text-align: center; font-family:verdana;"> Queue: </p>
+          <div class="row" id="queue-info">
+            <p style="text-align: center"> 8/12 </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p style="text-align: center; font-family:verdana;"> Time approx: </p>
+          <div class="row" id="queue-info">
+            <p style="text-align: center"> 210 min </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/washing_machine_full.jpg">
+      </div>
+      <div class="row">
+        <button class="btn btn-success" style="width: 100%">Get in line</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-danger" style="width: 100%">Report Problem</button>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-md-offset-2">
+      <div class="row" style="text-align: center;"> <h3> Machine 2 </h3> </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p style="text-align: center; font-family:verdana;"> Queue: </p>
+          <div class="row" id="queue-info">
+            <p style="text-align: center"> 0/12 </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <p style="text-align: center; font-family:verdana;"> Time approx: </p>
+          <div class="row" id="queue-info">
+            <p style="text-align: center"> 0 min </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/washing_machine_emtpy.png" style="width:100%; height: 300px;">
+      </div>
+      <div class="row">
+        <button class="btn btn-success" style="width: 100%">Get in line</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-danger" style="width: 100%">Report Problem</button>
+      </div>
+    </div>
+
+</div>
